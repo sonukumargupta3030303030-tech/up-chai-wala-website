@@ -1,188 +1,431 @@
-<!doctype html>
+
+<!DOCTYPE html>
 <html lang="hi">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#14532d">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>UP Chai Wala | Bakery & Cold Drink</title>
+<meta name="description" content="UP Chai Wala, Mahu Ghat, Harraiya, Basti. चाय, नाश्ता, बेकरी और कोल्ड ड्रिंक ऑनलाइन ऑर्डर करें।">
 <style>
-:root{--green:#14532d;--green2:#166534;--cream:#fffdf5;--orange:#f59e0b;--ink:#17251c;--muted:#647067;--line:#e4e9e4}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#f5f8f5;color:var(--ink);font-family:system-ui,-apple-system,"Noto Sans Devanagari",sans-serif}
-button,input,select{font:inherit}button{cursor:pointer}.hero{background:linear-gradient(135deg,#14532d,#166534);color:white;text-align:center;padding:25px 14px 21px}.logo{font-size:30px}.hero h1{font-size:26px;margin:3px 0}.hero p{margin:4px 0;color:#e2f3e7}.address{font-size:13px;margin-top:12px}.nav{position:sticky;top:0;z-index:10;background:white;border-bottom:1px solid var(--line);display:flex;justify-content:center;gap:8px;padding:9px;box-shadow:0 2px 8px #00000008}.nav a,.nav button{color:var(--green);font-weight:700;text-decoration:none;border:0;background:white;padding:7px 10px;border-radius:20px}.cart-pill{background:var(--green)!important;color:white!important}.wrap{max-width:1120px;margin:auto;padding:16px}.banner{background:linear-gradient(100deg,#dcfce7,#fff7df);padding:22px;border-radius:18px;text-align:center;margin:4px 0 18px}.banner h2{margin:0 0 8px;color:var(--green)}.banner p{margin:0 0 13px;color:#4b5d50}.btn{border:0;border-radius:10px;background:var(--green);color:#fff;font-weight:700;padding:11px 15px}.btn.orange{background:var(--orange);color:#382500}.btn.light{background:#e8f4eb;color:var(--green)}.section-title{font-size:21px;margin:18px 0 12px}.tools{display:grid;grid-template-columns:1fr auto;gap:9px;margin-bottom:10px}.search{width:100%;padding:12px 14px;border:1px solid #d9e1da;border-radius:12px;background:white}.filters{display:flex;gap:8px;overflow:auto;padding:4px 0 12px}.chip{white-space:nowrap;border:1px solid #d8e1d9;border-radius:30px;background:#fff;padding:8px 12px;color:#33483a}.chip.active{background:var(--green);color:white;border-color:var(--green)}.notice{font-size:12px;color:#6b4b10;background:#fff4d7;padding:10px 12px;border-radius:10px;margin:8px 0 14px}.grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}.product{background:white;border:1px solid var(--line);border-radius:15px;padding:12px;box-shadow:0 2px 7px #142b1a06;display:flex;flex-direction:column;min-width:0}.emoji{font-size:27px;background:#f4f8f3;border-radius:11px;width:48px;height:48px;display:grid;place-items:center}.product h3{font-size:15px;margin:9px 0 3px;overflow-wrap:anywhere}.product .meta{color:var(--muted);font-size:12px}.price{font-weight:800;color:var(--green);margin:9px 0}.product .btn{padding:9px 5px;font-size:13px;margin-top:auto}.qtyrow{display:flex;align-items:center;gap:8px;margin-top:8px}.qtyrow button{border:1px solid #d5e0d7;border-radius:8px;background:#f2f8f3;padding:4px 10px}.qtyrow span{font-weight:700}.empty{padding:30px;text-align:center;color:var(--muted);grid-column:1/-1}.layout{display:grid;grid-template-columns:minmax(0,1fr) 330px;gap:18px;align-items:start}.cartbox{background:white;border:1px solid var(--line);border-radius:16px;padding:16px;position:sticky;top:60px}.cartbox h2{margin-top:0}.cartitem{display:grid;grid-template-columns:1fr auto;gap:8px;padding:10px 0;border-bottom:1px solid var(--line);font-size:14px}.cartitem small{display:block;color:var(--muted)}.cart-controls{display:flex;align-items:center;gap:6px;margin-top:5px}.cart-controls button{border:1px solid #dbe4dc;border-radius:7px;background:#f5faf6;padding:2px 8px}.total{display:flex;justify-content:space-between;font-size:18px;font-weight:800;padding:14px 0}.field{width:100%;padding:10px;border:1px solid #d8e1d9;border-radius:9px;margin:5px 0 10px;background:white}.small{font-size:12px;color:var(--muted)}footer{margin-top:30px;background:#103f25;color:#e7f5eb;text-align:center;padding:24px 12px}.hidden{display:none!important}.floatwa{position:fixed;right:15px;bottom:15px;background:#16833b;color:#fff;border:0;border-radius:50px;padding:13px 17px;font-weight:800;box-shadow:0 5px 18px #0002;z-index:15}
-@media(max-width:850px){.grid{grid-template-columns:repeat(3,minmax(0,1fr))}.layout{grid-template-columns:1fr}.cartbox{position:static}}
-@media(max-width:560px){.wrap{padding:12px}.hero{padding:20px 10px}.hero h1{font-size:23px}.grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.product{padding:10px}.product h3{font-size:14px}.tools{grid-template-columns:1fr}.banner{padding:18px 12px}.nav{gap:1px}.nav a,.nav button{padding:7px 8px;font-size:13px}}
+:root {
+  --green:#104b31;
+  --dark:#073522;
+  --gold:#e8b94f;
+  --cream:#fff9e9;
+  --bg:#f3f7f3;
+  --white:#ffffff;
+  --text:#24352b;
+}
+* {box-sizing:border-box}
+html {scroll-behavior:smooth}
+body {
+  margin:0;
+  font-family:Arial,"Noto Sans Devanagari",sans-serif;
+  background:var(--bg);
+  color:var(--text);
+}
+button,input,select,textarea {font:inherit}
+button {cursor:pointer}
+a {color:inherit}
+.header {
+  background:linear-gradient(135deg,#073522,#145b39 65%,#986c21);
+  color:white;
+  text-align:center;
+  padding:27px 14px 23px;
+  border-bottom:4px solid var(--gold);
+}
+.logo {font-size:37px}
+.header h1 {margin:5px 0;color:var(--gold);font-size:27px}
+.header p {margin:7px 0;font-size:14px}
+.address {font-size:12px;color:#f7e9c2}
+.nav {
+  position:sticky;top:0;z-index:5;
+  display:flex;justify-content:center;gap:22px;
+  padding:12px;background:white;
+  box-shadow:0 2px 8px #00000012;
+}
+.nav a {text-decoration:none;color:var(--green);font-weight:bold;font-size:14px}
+.hero {
+  margin:16px auto;max-width:1250px;
+  padding:27px 18px;border-radius:17px;
+  background:linear-gradient(115deg,#104b31,#176641 62%,#b58b35);
+  color:white;text-align:center;
+}
+.hero h2 {margin:0 0 10px;color:#ffe5a1}
+.hero p {margin:8px auto;max-width:650px;line-height:1.7}
+.btn {
+  display:inline-block;border:0;border-radius:9px;
+  padding:11px 15px;font-weight:bold;text-decoration:none;
+}
+.btn-gold {background:var(--gold);color:#30220b}
+.btn-green {background:var(--green);color:white}
+.btn-light {background:#e8f4eb;color:var(--green)}
+main {max-width:1250px;margin:auto;padding:0 12px 35px}
+.section-title {font-size:21px;margin:22px 0 12px}
+.notice {
+  padding:12px;background:#fff4d4;border-radius:9px;
+  font-size:13px;line-height:1.6;margin-bottom:14px;
+}
+.tools {display:flex;gap:10px;margin:13px 0;flex-wrap:wrap}
+.tools input,.tools select {
+  min-width:0;padding:12px;border:1px solid #d9e1da;
+  border-radius:10px;background:white;
+}
+.tools input {flex:1}
+.tools select {max-width:190px}
+.categories {display:flex;gap:8px;overflow-x:auto;padding:5px 0 12px}
+.cat {
+  white-space:nowrap;border:1px solid #dce5dd;
+  background:white;border-radius:22px;padding:9px 14px;
+  color:var(--green);
+}
+.cat.active {background:var(--green);color:white}
+.layout {
+  display:grid;grid-template-columns:minmax(0,1fr) 330px;
+  gap:16px;align-items:start;
+}
+.products {
+  display:grid;grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:12px;
+}
+.product {
+  min-width:0;background:white;border:1px solid #e6ece6;
+  border-radius:13px;padding:9px;box-shadow:0 2px 7px #00000008;
+  display:flex;flex-direction:column;
+}
+.product img {
+  width:100%;height:130px;object-fit:cover;
+  border-radius:9px;background:#eef3ed;
+}
+.product h3 {font-size:15px;margin:10px 0 5px}
+.product .desc {font-size:12px;color:#778078;margin-bottom:7px}
+.prices {display:flex;gap:7px;align-items:center;flex-wrap:wrap;margin:4px 0}
+.sale {font-size:17px;font-weight:bold;color:var(--green)}
+.mrp {font-size:12px;color:#777;text-decoration:line-through}
+.discount {font-size:11px;color:#a15e00;font-weight:bold}
+.product .btn {margin-top:auto;padding:9px 5px;font-size:12px}
+.cart {
+  background:white;border:1px solid #e4e9e4;
+  border-radius:14px;padding:16px;position:sticky;top:58px;
+}
+.cart h2 {margin:0 0 13px;font-size:20px}
+.cart-empty {color:#758078;font-size:13px}
+.cart-line {
+  display:grid;grid-template-columns:minmax(0,1fr) auto;
+  gap:8px;padding:10px 0;border-bottom:1px solid #edf0ed;
+}
+.cart-name {font-size:13px;font-weight:bold}
+.cart-price {font-size:12px;color:var(--green);margin-top:4px}
+.qty {display:flex;align-items:center;gap:7px}
+.qty button {
+  border:0;border-radius:6px;background:#e9f2eb;
+  color:var(--green);padding:5px 9px;font-weight:bold;
+}
+.total {
+  display:flex;justify-content:space-between;
+  gap:10px;padding:15px 0;font-weight:bold;
+}
+.form-label {display:block;font-size:13px;margin:11px 0 5px}
+.field {
+  width:100%;padding:11px;border:1px solid #dce4dc;
+  border-radius:9px;background:white;
+}
+textarea.field {resize:vertical}
+.cart .btn {width:100%;margin-top:9px}
+.small {font-size:11px;line-height:1.6;color:#6c776f}
+.footer {
+  text-align:center;background:var(--dark);color:white;
+  padding:25px 12px;font-size:13px;line-height:1.9;
+}
+.float-wa {
+  position:fixed;right:14px;bottom:17px;z-index:10;
+  background:#168747;color:white;padding:13px 16px;
+  border-radius:30px;text-decoration:none;font-weight:bold;
+  box-shadow:0 4px 14px #0003;
+}
+.no-results {background:white;padding:20px;border-radius:10px}
+@media(max-width:950px) {
+  .layout {grid-template-columns:1fr}
+  .cart {position:static}
+  .products {grid-template-columns:repeat(3,minmax(0,1fr))}
+}
+@media(max-width:520px) {
+  .header {padding:20px 10px}
+  .header h1 {font-size:23px}
+  .hero {margin:12px 0;padding:22px 12px}
+  .hero h2 {font-size:20px}
+  .products {grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}
+  .product {padding:7px}
+  .product img {height:125px}
+  .product h3 {font-size:14px}
+  .tools select {max-width:140px}
+  .nav {gap:17px}
+}
 </style>
 </head>
 <body>
-<header class="hero">
+
+<header class="header">
   <div class="logo">☕ 🥐 🥤</div>
-  <h1>UP Chai Wala</h1><p><b>Bakery & Cold Drink</b></p>
-  <p>आपकी अपनी दुकान • चाय और नाश्ता</p>
-  <div class="address">📍 Mahu Ghat, Harraiya, Basti, UP 272155</div>
+  <h1>UP Chai Wala</h1>
+  <p><strong>Bakery & Cold Drink</strong></p>
+  <p>आपकी अपनी दुकान · चाय और नाश्ता</p>
+  <div class="address">📍 Mahu Ghat, Harraiya, Basti, Uttar Pradesh 272155</div>
 </header>
+
 <nav class="nav">
-  <a href="#home">होम</a><a href="#products">सामान</a><a href="#checkout">ऑर्डर</a>
-  <a href="#cart">कार्ट 🛒 <span id="navCount">0</span></a>
+  <a href="#home">होम</a>
+  <a href="#shop">सामान</a>
+  <a href="#cart">ऑर्डर</a>
+  <a href="#cart">🛒 कार्ट <span id="cartCount">0</span></a>
 </nav>
-<main class="wrap" id="home">
-  <section class="banner">
-    <h2>स्वाद भी, अपनापन भी! ❤️</h2>
-    <p>गरमा-गरम चाय, स्वादिष्ट नाश्ता, बेकरी आइटम और आपकी पसंद की कोल्ड ड्रिंक — सब एक ही जगह।</p>
-    <button class="btn" onclick="document.querySelector('#products').scrollIntoView()">🛍️ सामान देखें</button>
-    <button class="btn orange" onclick="document.querySelector('#cart').scrollIntoView()">ऑर्डर करें</button>
-  </section>
-  <h2 class="section-title" id="products">🛍️ हमारी दुकान के सामान</h2>
-  <div class="notice">ध्यान दें: नीचे दिए गए दाम उदाहरण के लिए हैं। दुकान में उपलब्धता और सही कीमतें जाँचकर बदलें। ऑर्डर WhatsApp पर भेजने से पहले कुल रकम ग्राहक को दिखेगी।</div>
-  <div class="tools">
-    <input id="search" class="search" placeholder="🔎 चाय, समोसा, बिस्कुट खोजें..." oninput="renderProducts()">
-    <select id="sort" class="search" onchange="renderProducts()" aria-label="सामान क्रम"><option value="default">सामान का क्रम</option><option value="low">कम कीमत पहले</option><option value="high">ज्यादा कीमत पहले</option><option value="az">नाम A–Z</option></select>
+
+<section class="hero" id="home">
+  <h2>स्वाद भी, अपनापन भी! ❤️</h2>
+  <p>गरमा-गरम चाय, स्वादिष्ट नाश्ता, बेकरी आइटम और कोल्ड ड्रिंक — सब कुछ एक ही जगह।</p>
+  <a class="btn btn-gold" href="#shop">🛍️ सामान देखें</a>
+  <a class="btn btn-light" href="#cart">ऑर्डर करें</a>
+</section>
+
+<main>
+  <h2 class="section-title" id="shop">🛍️ हमारी दुकान का सामान</h2>
+  <div class="notice">
+    अपने पसंद का सामान कार्ट में जोड़ें। MRP, बिक्री कीमत और उपलब्धता ऑर्डर भेजने से पहले जाँच लें।
   </div>
-  <div class="filters" id="filters"></div>
+
+  <div class="tools">
+    <input id="search" type="search" placeholder="🔎 चाय, समोसा, बिस्कुट खोजें..." aria-label="सामान खोजें">
+    <select id="sort" aria-label="सामान का क्रम">
+      <option value="default">सामान का क्रम</option>
+      <option value="low">कम कीमत पहले</option>
+      <option value="high">ज्यादा कीमत पहले</option>
+      <option value="name">नाम के अनुसार</option>
+    </select>
+  </div>
+
+  <div class="categories" id="categories"></div>
+
   <div class="layout">
-    <section><div class="grid" id="productGrid"></div><p class="small" id="resultCount"></p></section>
-    <aside class="cartbox" id="cart">
-      <h2>🛒 आपका कार्ट</h2><div id="cartItems"><p class="small">अभी कार्ट खाली है। सामान जोड़ें।</p></div>
-      <div class="total"><span>कुल रकम</span><span id="total">₹0</span></div>
-      <div id="checkout">
-        <h3>ऑर्डर की जानकारी</h3>
-        <label class="small" for="customerName">आपका नाम *</label><input class="field" id="customerName" placeholder="नाम लिखें">
-        <label class="small" for="customerPhone">मोबाइल नंबर</label><input class="field" id="customerPhone" inputmode="numeric" placeholder="अपना मोबाइल नंबर">
-        <label class="small" for="orderType">ऑर्डर का तरीका</label><select class="field" id="orderType"><option>दुकान से ले जाएंगे</option><option>डिलीवरी चाहिए (पहले पुष्टि करें)</option></select>
-        <label class="small" for="customerAddress">पता / अतिरिक्त जानकारी</label><input class="field" id="customerAddress" placeholder="पता या कोई खास बात">
-        <button class="btn" style="width:100%" onclick="sendOrder()">WhatsApp पर ऑर्डर भेजें</button>
-        <p class="small">WhatsApp खुलने पर संदेश जाँचकर स्वयं Send दबाएँ। डिलीवरी की उपलब्धता/चार्ज दुकान से पुष्टि करें।</p>
-        <button class="btn light" style="width:100%" onclick="clearCart()">कार्ट खाली करें</button>
+    <section>
+      <div class="products" id="products"></div>
+    </section>
+
+    <aside class="cart" id="cart">
+      <h2>🛒 आपका कार्ट</h2>
+      <div id="cartItems" class="cart-empty">अभी कार्ट खाली है। सामान जोड़ें।</div>
+      <div class="total">
+        <span>कुल रकम</span><span id="total">₹0</span>
       </div>
+      <div class="small" id="savings"></div>
+
+      <h3>ऑर्डर की जानकारी</h3>
+      <form id="orderForm">
+        <label class="form-label" for="customer">आपका नाम *</label>
+        <input class="field" id="customer" required maxlength="70" placeholder="अपना नाम लिखें">
+
+        <label class="form-label" for="phone">मोबाइल नंबर *</label>
+        <input class="field" id="phone" required inputmode="numeric"
+          pattern="[6-9][0-9]{9}" maxlength="10" placeholder="10 अंकों का मोबाइल नंबर">
+
+        <label class="form-label" for="address">पता / डिलीवरी की जानकारी *</label>
+        <textarea class="field" id="address" required maxlength="300" rows="2"
+          placeholder="गाँव, मोहल्ला या दुकान से सामान लेने की जानकारी"></textarea>
+
+        <label class="form-label" for="payment">भुगतान का तरीका *</label>
+        <select class="field" id="payment" required>
+          <option value="दुकान पर भुगतान">दुकान पर भुगतान</option>
+          <option value="सामान मिलने पर भुगतान">सामान मिलने पर भुगतान</option>
+          <option value="UPI भुगतान">UPI भुगतान (भुगतान की पुष्टि जरूरी)</option>
+        </select>
+
+        <label class="form-label" for="note">अन्य जानकारी (वैकल्पिक)</label>
+        <textarea class="field" id="note" maxlength="200" rows="2"
+          placeholder="जैसे चाय कम मीठी रखें"></textarea>
+
+        <button class="btn btn-green" type="submit">WhatsApp पर ऑर्डर भेजें</button>
+        <button class="btn btn-light" type="button" id="upiButton">UPI ऐप खोलें</button>
+        <p class="small">
+          WhatsApp पर ऑर्डर भेजने से ऑर्डर की जानकारी जाएगी; यह अपने-आप भुगतान या डिलीवरी की पुष्टि नहीं है।
+          डिलीवरी की उपलब्धता और शुल्क दुकान से पूछें।
+        </p>
+      </form>
     </aside>
   </div>
 </main>
-<footer><b>UP Chai Wala — Bakery & Cold Drink</b><p>Mahu Ghat, Harraiya, Basti, Uttar Pradesh 272155</p><p>ऑर्डर और उपलब्धता की पुष्टि WhatsApp पर करें।</p><small>© <span id="year"></span> UP Chai Wala</small></footer>
-<button class="floatwa" onclick="openWhatsApp()">WhatsApp 💬</button>
+
+<footer class="footer">
+  <strong>UP Chai Wala</strong><br>
+  Bakery & Cold Drink<br>
+  Mahu Ghat, Harraiya, Basti, UP 272155<br>
+  WhatsApp: 7393937360<br>
+  <span style="color:#f1d58c">आपका स्वागत है — फिर आइए!</span>
+</footer>
+
+<a class="float-wa" href="https://wa.me/917393937360" target="_blank" rel="noopener">
+  WhatsApp 💬
+</a>
+
 <script>
-const WHATSAPP_NUMBER = "917393937360"; // भारत का country code +91 सहित, केवल अंक
-const CATEGORIES = ["सभी सामान","चाय और नाश्ता","बेकरी","स्नैक्स","पेय पदार्थ","मिठाई और चॉकलेट","किराना","अन्य"];
-const catalog = [
-["चाय","चाय और नाश्ता","☕",10,"एक कप"],["कॉफी","चाय और नाश्ता","☕",20,"एक कप"],["समोसा","चाय और नाश्ता","🥟",10,"एक पीस"],["पकौड़ी","चाय और नाश्ता","🍘",20,"एक प्लेट"],["ब्रेड पकौड़ा","चाय और नाश्ता","🍞",15,"एक पीस"],["मैगी","चाय और नाश्ता","🍜",30,"एक प्लेट"],["पोहा","चाय और नाश्ता","🥣",25,"एक प्लेट"],["बिस्कुट","बेकरी","🍪",10,"एक पैकेट"],["केक","बेकरी","🍰",30,"एक पीस"],["ब्रेड","बेकरी","🍞",40,"एक पैकेट"],["रस्क / टोस्ट","बेकरी","🥨",30,"एक पैकेट"],["पेस्ट्री","बेकरी","🍰",35,"एक पीस"],["क्रीम रोल","बेकरी","🥐",20,"एक पीस"],["बन","बेकरी","🥯",10,"एक पीस"],["चिप्स","स्नैक्स","🥔",10,"एक पैकेट"],["नमकीन","स्नैक्स","🥜",20,"एक पैकेट"],["पॉपकॉर्न","स्नैक्स","🍿",20,"एक पैकेट"],["भुजिया","स्नैक्स","🥨",20,"एक पैकेट"],["चॉकलेट","मिठाई और चॉकलेट","🍫",20,"एक पीस"],["टॉफी","मिठाई और चॉकलेट","🍬",1,"एक पीस"],["लॉलीपॉप","मिठाई और चॉकलेट","🍭",5,"एक पीस"],["कोल्ड ड्रिंक","पेय पदार्थ","🥤",40,"एक बोतल"],["पानी की बोतल","पेय पदार्थ","💧",20,"एक बोतल"],["सोडा","पेय पदार्थ","🫧",20,"एक बोतल"],["एनर्जी ड्रिंक","पेय पदार्थ","⚡",60,"एक कैन"],["लस्सी","पेय पदार्थ","🥛",25,"एक गिलास"],["जूस","पेय पदार्थ","🧃",30,"एक पैक"],["दूध","किराना","🥛",30,"500 ml"],["चीनी","किराना","🧂",25,"500 ग्राम"],["नमक","किराना","🧂",20,"एक पैकेट"],["मैदा","किराना","🌾",35,"500 ग्राम"],["आटा","किराना","🌾",30,"500 ग्राम"],["दाल","किराना","🫘",60,"500 ग्राम"],["चावल","किराना","🍚",40,"500 ग्राम"],["तेल","किराना","🫗",80,"500 ml"],["साबुन","अन्य","🧼",35,"एक पीस"],["शैम्पू पाउच","अन्य","🧴",2,"एक पाउच"],["टिश्यू","अन्य","🧻",20,"एक पैक"],["बैटरी","अन्य","🔋",20,"एक जोड़ी"],["अगरबत्ती","अन्य","🪔",20,"एक पैकेट"],
-["अदरक वाली चाय","चाय और नाश्ता","☕",15,"एक कप"],["मसाला चाय","चाय और नाश्ता","☕",15,"एक कप"],["इलायची चाय","चाय और नाश्ता","☕",15,"एक कप"],["लेमन टी","चाय और नाश्ता","🍵",20,"एक कप"],["ग्रीन टी","चाय और नाश्ता","🍵",25,"एक कप"],["ब्रेड बटर","चाय और नाश्ता","🍞",25,"एक प्लेट"],["ब्रेड जैम","चाय और नाश्ता","🍞",25,"एक प्लेट"],["आलू टिक्की","चाय और नाश्ता","🥔",25,"एक प्लेट"],["कचौड़ी","चाय और नाश्ता","🥮",15,"एक पीस"],["जलेबी","मिठाई और चॉकलेट","🍥",30,"100 ग्राम"],["गुलाब जामुन","मिठाई और चॉकलेट","🍮",20,"एक पीस"],["लड्डू","मिठाई और चॉकलेट","🟠",20,"एक पीस"],["पेड़ा","मिठाई और चॉकलेट","🍬",20,"एक पीस"],["बर्फी","मिठाई और चॉकलेट","🍬",25,"एक पीस"],["मफिन","बेकरी","🧁",25,"एक पीस"],["डोनट","बेकरी","🍩",40,"एक पीस"],["पिज्जा ब्रेड","बेकरी","🍕",50,"एक पीस"],["गार्लिक ब्रेड","बेकरी","🥖",45,"एक पीस"],["वेज सैंडविच","चाय और नाश्ता","🥪",40,"एक पीस"],["चीज सैंडविच","चाय और नाश्ता","🥪",60,"एक पीस"],["बर्गर","चाय और नाश्ता","🍔",50,"एक पीस"],["फ्रेंच फ्राइज","चाय और नाश्ता","🍟",50,"एक प्लेट"],["स्प्रिंग रोल","चाय और नाश्ता","🥢",40,"एक प्लेट"],["मोमोज","चाय और नाश्ता","🥟",50,"एक प्लेट"],["चाउमीन","चाय और नाश्ता","🍜",50,"एक प्लेट"],["पास्ता","चाय और नाश्ता","🍝",60,"एक प्लेट"],["इडली","चाय और नाश्ता","🥘",30,"एक प्लेट"],["ढोकला","चाय और नाश्ता","🍰",30,"एक प्लेट"],["मूंगफली","स्नैक्स","🥜",10,"एक पैकेट"],["चना जोर गरम","स्नैक्स","🥜",10,"एक पैकेट"],["पापड़","स्नैक्स","🫓",20,"एक पैकेट"],["मखाना","स्नैक्स","🥣",50,"एक पैकेट"],["काजू","स्नैक्स","🥜",100,"100 ग्राम"],["बादाम","स्नैक्स","🥜",90,"100 ग्राम"],["किशमिश","स्नैक्स","🍇",50,"100 ग्राम"],["ओट्स","किराना","🥣",60,"एक पैकेट"],["कॉर्नफ्लेक्स","किराना","🥣",80,"एक पैकेट"],["नूडल्स","किराना","🍜",15,"एक पैकेट"],["टोमैटो सॉस","किराना","🍅",50,"एक बोतल"],["अचार","किराना","🥭",40,"एक जार"],["पीनट बटर","किराना","🥜",120,"एक जार"],["जैम","किराना","🍓",60,"एक जार"],["शहद","किराना","🍯",100,"एक बोतल"],["बेसन","किराना","🌾",40,"500 ग्राम"],["सूजी","किराना","🌾",30,"500 ग्राम"],["हल्दी","किराना","🟡",25,"100 ग्राम"],["मिर्च पाउडर","किराना","🌶️",30,"100 ग्राम"],["धनिया पाउडर","किराना","🌿",25,"100 ग्राम"],["चाय पत्ती","किराना","🍃",80,"250 ग्राम"],["कॉफी पाउडर","किराना","☕",100,"100 ग्राम"],["बिस्कुट क्रीम","बेकरी","🍪",10,"एक पैकेट"],["नमकीन बिस्कुट","बेकरी","🍪",10,"एक पैकेट"],["कुकीज़","बेकरी","🍪",30,"एक पैकेट"],["खारी","बेकरी","🥐",25,"एक पैकेट"],["पाव","बेकरी","🍞",25,"एक पैकेट"],["पिज्जा","चाय और नाश्ता","🍕",80,"एक पीस"],["मसाला छाछ","पेय पदार्थ","🥛",25,"एक बोतल"],["नारियल पानी","पेय पदार्थ","🥥",40,"एक पैक"],["ठंडा दूध","पेय पदार्थ","🥛",35,"एक बोतल"],["फ्लेवर्ड मिल्क","पेय पदार्थ","🥛",35,"एक बोतल"],["आइसक्रीम कप","मिठाई और चॉकलेट","🍨",30,"एक कप"],["कुल्फी","मिठाई और चॉकलेट","🍦",25,"एक पीस"],["च्युइंग गम","मिठाई और चॉकलेट","🍬",5,"एक पीस"],["मिंट कैंडी","मिठाई और चॉकलेट","🍬",5,"एक पैकेट"],["पेन","अन्य","🖊️",10,"एक पीस"],["पेंसिल","अन्य","✏️",5,"एक पीस"],["कॉपी","अन्य","📒",30,"एक पीस"],["मोमबत्ती","अन्य","🕯️",10,"एक पैकेट"],["माचिस","अन्य","🔥",2,"एक डिब्बी"],["कंघी","अन्य","🪮",20,"एक पीस"],["टूथब्रश","अन्य","🪥",25,"एक पीस"],["टूथपेस्ट","अन्य","🦷",45,"एक पैक"],["डिटर्जेंट","अन्य","🧺",30,"एक पैकेट"],["डिशवॉश बार","अन्य","🧽",20,"एक पीस"],["हैंडवॉश","अन्य","🧴",60,"एक बोतल"]
+const WHATSAPP = "917393937360";
+const UPI_ID = "sonu-7393@ptyes";
+const SHOP_NAME = "UP Chai Wala";
+
+const productsData = [
+  {id:1,name:"चाय",cat:"चाय और नाश्ता",mrp:15,price:10,unit:"एक कप",img:"https://images.unsplash.com/photo-1571934811356-5cc061b6821f?auto=format&fit=crop&w=600&q=80"},
+  {id:2,name:"कॉफी",cat:"चाय और नाश्ता",mrp:25,price:20,unit:"एक कप",img:"https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=600&q=80"},
+  {id:3,name:"समोसा",cat:"चाय और नाश्ता",mrp:15,price:10,unit:"एक पीस",img:"https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=600&q=80"},
+  {id:4,name:"पकौड़ी",cat:"चाय और नाश्ता",mrp:25,price:20,unit:"एक प्लेट",img:"https://images.unsplash.com/photo-1601050690117-94f5f6fa8bd7?auto=format&fit=crop&w=600&q=80"},
+  {id:5,name:"ब्रेड पकौड़ा",cat:"चाय और नाश्ता",mrp:20,price:15,unit:"एक पीस",img:"https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?auto=format&fit=crop&w=600&q=80"},
+  {id:6,name:"मैगी",cat:"चाय और नाश्ता",mrp:40,price:30,unit:"एक प्लेट",img:"https://images.unsplash.com/photo-1569718212165-3a8278d5f624?auto=format&fit=crop&w=600&q=80"},
+  {id:7,name:"पोहा",cat:"चाय और नाश्ता",mrp:30,price:25,unit:"एक प्लेट",img:"https://images.unsplash.com/photo-1606491956689-2ea866880c84?auto=format&fit=crop&w=600&q=80"},
+  {id:8,name:"बिस्कुट",cat:"बेकरी",mrp:10,price:10,unit:"एक पैकेट",img:"https://images.unsplash.com/photo-1558961363-fa8fdf82db35?auto=format&fit=crop&w=600&q=80"},
+  {id:9,name:"केक",cat:"बेकरी",mrp:40,price:30,unit:"एक पीस",img:"https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=600&q=80"},
+  {id:10,name:"ब्रेड",cat:"बेकरी",mrp:45,price:40,unit:"एक पैकेट",img:"https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=600&q=80"},
+  {id:11,name:"रस्क / टोस्ट",cat:"बेकरी",mrp:35,price:30,unit:"एक पैकेट",img:"https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?auto=format&fit=crop&w=600&q=80"},
+  {id:12,name:"पेस्ट्री",cat:"बेकरी",mrp:40,price:35,unit:"एक पीस",img:"https://images.unsplash.com/photo-1488477181946-6428a0291777?auto=format&fit=crop&w=600&q=80"},
+  {id:13,name:"चिप्स",cat:"स्नैक्स",mrp:10,price:10,unit:"एक पैकेट",img:"https://images.unsplash.com/photo-1566478989037-eec170784d0b?auto=format&fit=crop&w=600&q=80"},
+  {id:14,name:"नमकीन",cat:"स्नैक्स",mrp:20,price:20,unit:"एक पैकेट",img:"https://images.unsplash.com/photo-1599490659213-e2b9527bd087?auto=format&fit=crop&w=600&q=80"},
+  {id:15,name:"चॉकलेट",cat:"मिठाई और चॉकलेट",mrp:20,price:20,unit:"एक पीस",img:"https://images.unsplash.com/photo-1511381939415-e44015466834?auto=format&fit=crop&w=600&q=80"},
+  {id:16,name:"टॉफी",cat:"मिठाई और चॉकलेट",mrp:2,price:1,unit:"एक पीस",img:"https://images.unsplash.com/photo-1581798459219-318e76aecc7b?auto=format&fit=crop&w=600&q=80"},
+  {id:17,name:"कोल्ड ड्रिंक",cat:"पेय पदार्थ",mrp:45,price:40,unit:"एक बोतल",img:"https://images.unsplash.com/photo-1544145945-f90425340c7e?auto=format&fit=crop&w=600&q=80"},
+  {id:18,name:"पानी की बोतल",cat:"पेय पदार्थ",mrp:20,price:20,unit:"एक बोतल",img:"https://images.unsplash.com/photo-1602143407151-7111542de6e8?auto=format&fit=crop&w=600&q=80"},
+  {id:19,name:"सोडा",cat:"पेय पदार्थ",mrp:25,price:20,unit:"एक बोतल",img:"https://images.unsplash.com/photo-1513558161293-cdaf765edfd7?auto=format&fit=crop&w=600&q=80"},
+  {id:20,name:"मिनरल वाटर",cat:"पेय पदार्थ",mrp:20,price:20,unit:"एक बोतल",img:"https://images.unsplash.com/photo-1523362628745-0c100150b504?auto=format&fit=crop&w=600&q=80"}
 ];
-// A practical 500+ catalogue: common products plus pack sizes/flavours. Verify names, stock and prices before taking real orders.
-const packVariants = [
-["छोटा पैक","एक पैक",0.6],["रेगुलर पैक","एक पैक",1],["बड़ा पैक","एक पैक",1.8],["फैमिली पैक","एक पैक",2.8],["मिनी","एक पीस",0.5],["स्टैंडर्ड","एक पीस",1],["बड़ा","एक पीस",1.5]
-];
-let products = catalog.map((x,i)=>({id:i+1,name:x[0],cat:x[1],emoji:x[2],price:x[3],unit:x[4]}));
-let nextId=products.length+1;
-catalog.forEach((x,i)=>{
-  const baseName=x[0],cat=x[1],emoji=x[2],price=x[3],unit=x[4];
-  packVariants.forEach((v,j)=>{
-    if(j===0 && i%5!==0)return;
-    if(j===1 && i%4!==0)return;
-    const p=Math.max(1,Math.round(price*v[2]));
-    products.push({id:nextId++,name:baseName+" ("+v[0]+")",cat,emoji,price:p,unit:v[1]});
+
+let cart = {};
+let activeCategory = "सभी सामान";
+
+const rupees = n => "₹" + n;
+const categories = ["सभी सामान", ...new Set(productsData.map(p => p.cat))];
+
+function renderCategories() {
+  document.getElementById("categories").innerHTML = categories.map(c =>
+    `<button class="cat ${c===activeCategory?"active":""}" data-cat="${c}">${c}</button>`
+  ).join("");
+}
+
+function renderProducts() {
+  const query = document.getElementById("search").value.trim().toLowerCase();
+  const sort = document.getElementById("sort").value;
+  let list = productsData.filter(p =>
+    (activeCategory==="सभी सामान" || p.cat===activeCategory) &&
+    (p.name.toLowerCase().includes(query) || p.cat.toLowerCase().includes(query))
+  );
+  if(sort==="low") list.sort((a,b)=>a.price-b.price);
+  if(sort==="high") list.sort((a,b)=>b.price-a.price);
+  if(sort==="name") list.sort((a,b)=>a.name.localeCompare(b.name,"hi"));
+
+  document.getElementById("products").innerHTML = list.length ? list.map(p => {
+    const saving = p.mrp-p.price;
+    return `<article class="product">
+      <img src="${p.img}" alt="${p.name}" loading="lazy"
+        onerror="this.onerror=null;this.src='https://placehold.co/500x350/f0f4ef/104b31?text=UP+Chai+Wala'">
+      <h3>${p.name}</h3>
+      <div class="desc">${p.unit}</div>
+      <div class="prices">
+        <span class="sale">${rupees(p.price)}</span>
+        <span class="mrp">MRP ${rupees(p.mrp)}</span>
+      </div>
+      ${saving>0?`<div class="discount">बचत ${rupees(saving)}</div>`:'<div class="discount">उचित कीमत</div>'}
+      <button class="btn btn-green" data-add="${p.id}">+ कार्ट में जोड़ें</button>
+    </article>`;
+  }).join("") : `<div class="no-results">यह सामान नहीं मिला। दूसरा नाम खोजें।</div>`;
+}
+
+function renderCart() {
+  const items = Object.entries(cart).filter(([id,q])=>q>0);
+  const count = items.reduce((sum,[id,q])=>sum+q,0);
+  const total = items.reduce((sum,[id,q])=>sum+productsData.find(p=>p.id===Number(id)).price*q,0);
+  const savings = items.reduce((sum,[id,q])=>{
+    const p=productsData.find(x=>x.id===Number(id));
+    return sum+(p.mrp-p.price)*q;
+  },0);
+
+  document.getElementById("cartCount").textContent = count;
+  document.getElementById("total").textContent = rupees(total);
+  document.getElementById("savings").textContent = savings>0
+    ? "कुल अनुमानित बचत: "+rupees(savings) : "";
+
+  document.getElementById("cartItems").className = items.length ? "" : "cart-empty";
+  document.getElementById("cartItems").innerHTML = items.length ? items.map(([id,q])=>{
+    const p=productsData.find(x=>x.id===Number(id));
+    return `<div class="cart-line">
+      <div><div class="cart-name">${p.name}</div>
+      <div class="cart-price">${rupees(p.price)} × ${q} = ${rupees(p.price*q)}</div></div>
+      <div class="qty">
+        <button type="button" data-minus="${id}" aria-label="एक कम करें">−</button>
+        <span>${q}</span>
+        <button type="button" data-plus="${id}" aria-label="एक बढ़ाएँ">+</button>
+      </div>
+    </div>`;
+  }).join("") : "अभी कार्ट खाली है। सामान जोड़ें।";
+}
+
+document.addEventListener("click",e=>{
+  const add=e.target.closest("[data-add]");
+  const plus=e.target.closest("[data-plus]");
+  const minus=e.target.closest("[data-minus]");
+  const cat=e.target.closest("[data-cat]");
+  if(add) {
+    const id=Number(add.dataset.add);
+    cart[id]=(cart[id]||0)+1;
+    renderCart();
+  }
+  if(plus) {const id=Number(plus.dataset.plus);cart[id]=(cart[id]||0)+1;renderCart();}
+  if(minus) {const id=Number(minus.dataset.minus);cart[id]=(cart[id]||0)-1;if(cart[id]<=0)delete cart[id];renderCart();}
+  if(cat) {activeCategory=cat.dataset.cat;renderCategories();renderProducts();}
+});
+
+document.getElementById("search").addEventListener("input",renderProducts);
+document.getElementById("sort").addEventListener("change",renderProducts);
+
+function getOrder() {
+  const items=Object.entries(cart).filter(([id,q])=>q>0);
+  if(!items.length) {alert("पहले कार्ट में सामान जोड़ें।");return null;}
+  const customer=document.getElementById("customer").value.trim();
+  const phone=document.getElementById("phone").value.trim();
+  const address=document.getElementById("address").value.trim();
+  const payment=document.getElementById("payment").value;
+  const note=document.getElementById("note").value.trim();
+  if(!customer || !/^[6-9][0-9]{9}$/.test(phone) || !address) {
+    alert("कृपया नाम, सही 10 अंकों का मोबाइल नंबर और पता भरें।");
+    return null;
+  }
+  const total=items.reduce((sum,[id,q])=>sum+productsData.find(p=>p.id===Number(id)).price*q,0);
+  const lines=items.map(([id,q])=>{
+    const p=productsData.find(x=>x.id===Number(id));
+    return `${p.name} — ${q} × ${rupees(p.price)} (MRP ${rupees(p.mrp)}) = ${rupees(p.price*q)}`;
   });
+  return {customer,phone,address,payment,note,total,lines};
+}
+
+document.getElementById("orderForm").addEventListener("submit",e=>{
+  e.preventDefault();
+  const o=getOrder();
+  if(!o)return;
+  let msg=`नया ऑर्डर — ${SHOP_NAME}\n\nग्राहक: ${o.customer}\nमोबाइल: ${o.phone}\nपता: ${o.address}\n\nसामान:\n${o.lines.join("\n")}\n\nकुल रकम: ${rupees(o.total)}\nभुगतान: ${o.payment}\n`;
+  if(o.note)msg+=`\nअन्य जानकारी: ${o.note}\n`;
+  msg+="\nकृपया ऑर्डर और उपलब्धता की पुष्टि करें।";
+  if(o.payment==="UPI भुगतान") {
+    msg+="\nध्यान दें: UPI भुगतान की पुष्टि अलग से की जाएगी।";
+  }
+  window.open("https://wa.me/"+WHATSAPP+"?text="+encodeURIComponent(msg),"_blank");
 });
-const flavours = ["मसाला","टमाटर","क्रीम एंड अनियन","चिली","चीज","क्लासिक"];
-catalog.filter(x=>["चिप्स","नमकीन","कोल्ड ड्रिंक","जूस","बिस्कुट","चॉकलेट","मैगी","नूडल्स"].includes(x[0])).forEach(x=>{
-  flavours.forEach(f=>products.push({id:nextId++,name:x[0]+" - "+f,cat:x[1],emoji:x[2],price:x[3],unit:x[4]}));
+
+document.getElementById("upiButton").addEventListener("click",()=>{
+  const o=getOrder();
+  if(!o)return;
+  const url="upi://pay?pa="+encodeURIComponent(UPI_ID)+
+    "&pn="+encodeURIComponent(SHOP_NAME)+
+    "&am="+encodeURIComponent(o.total.toFixed(2))+
+    "&cu=INR&tn="+encodeURIComponent("UP Chai Wala order");
+  window.location.href=url;
 });
-let activeCategory="सभी सामान";
-let cart=JSON.parse(localStorage.getItem("upcw_cart")||"{}");
-function rupees(n){return "₹"+Number(n).toLocaleString("en-IN")}
-function saveCart(){localStorage.setItem("upcw_cart",JSON.stringify(cart));renderCart()}
-function makeFilters(){document.getElementById("filters").innerHTML=CATEGORIES.map(c=>`<button class="chip ${c===activeCategory?"active":""}" onclick="setCategory(${JSON.stringify(c).replace(/"/g,'&quot;')})">${c}</button>`).join("")}
-function setCategory(c){activeCategory=c;makeFilters();renderProducts()}
-function renderProducts(){
- let q=document.getElementById("search").value.trim().toLowerCase();
- let list=products.filter(p=>(activeCategory==="सभी सामान"||p.cat===activeCategory)&&(p.name+" "+p.cat).toLowerCase().includes(q));
- let s=document.getElementById("sort").value;
- if(s==="low")list.sort((a,b)=>a.price-b.price);if(s==="high")list.sort((a,b)=>b.price-a.price);if(s==="az")list.sort((a,b)=>a.name.localeCompare(b.name,"hi"));
- document.getElementById("resultCount").textContent=`${list.length} सामान दिख रहे हैं • कुल कैटलॉग में ${products.length}+ विकल्प`;
- document.getElementById("productGrid").innerHTML=list.length?list.map(p=>`<article class="product"><div class="emoji">${p.emoji}</div><h3>${escapeHTML(p.name)}</h3><div class="meta">${escapeHTML(p.unit)}</div><div class="price">${rupees(p.price)}</div><button class="btn" onclick="addToCart(${p.id})">＋ कार्ट में जोड़ें</button></article>`).join(""):`<div class="empty">यह सामान नहीं मिला। कोई दूसरा नाम खोजें।</div>`;
-}
-function escapeHTML(s){return String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]))}
-function addToCart(id){cart[id]=(cart[id]||0)+1;saveCart()}
-function changeQty(id,delta){cart[id]=(cart[id]||0)+delta;if(cart[id]<=0)delete cart[id];saveCart()}
-function renderCart(){
- let ids=Object.keys(cart).filter(id=>cart[id]>0);
- let total=0,count=0;
- document.getElementById("cartItems").innerHTML=ids.length?ids.map(id=>{let p=products.find(x=>x.id===Number(id));if(!p)return "";let q=cart[id];total+=p.price*q;count+=q;return `<div class="cartitem"><div><b>${escapeHTML(p.emoji+" "+p.name)}</b><small>${rupees(p.price)} × ${q} = ${rupees(p.price*q)}</small><div class="cart-controls"><button onclick="changeQty(${p.id},-1)">−</button><span>${q}</span><button onclick="changeQty(${p.id},1)">＋</button></div></div><button onclick="changeQty(${p.id},-${q})" title="हटाएँ">✕</button></div>`}).join(""):`<p class="small">अभी कार्ट खाली है। सामान जोड़ें।</p>`;
- document.getElementById("total").textContent=rupees(total);document.getElementById("navCount").textContent=count;
-}
-function orderText(){
- let ids=Object.keys(cart).filter(id=>cart[id]>0),total=0;
- if(!ids.length){alert("पहले कार्ट में सामान जोड़ें।");return null}
- const name=document.getElementById("customerName").value.trim();
- if(!name){alert("कृपया अपना नाम लिखें।");document.getElementById("customerName").focus();return null}
- let lines=ids.map(id=>{let p=products.find(x=>x.id===Number(id));let sub=p.price*cart[id];total+=sub;return `• ${p.name} × ${cart[id]} = ${rupees(sub)}`});
- const phone=document.getElementById("customerPhone").value.trim()||"नहीं दिया";
- const type=document.getElementById("orderType").value;
- const address=document.getElementById("customerAddress").value.trim()||"नहीं दिया";
- return `नमस्ते UP Chai Wala!\nमुझे यह ऑर्डर देना है:\n\n${lines.join("\n")}\n\nकुल सामान की रकम: ${rupees(total)}\nनाम: ${name}\nग्राहक मोबाइल: ${phone}\nऑर्डर तरीका: ${type}\nपता/नोट: ${address}\n\nकृपया उपलब्धता और अंतिम कीमत की पुष्टि करें।`;
-}
-function sendOrder(){const msg=orderText();if(msg)window.open("https://wa.me/"+WHATSAPP_NUMBER+"?text="+encodeURIComponent(msg),"_blank")}
-function openWhatsApp(){window.open("https://wa.me/"+WHATSAPP_NUMBER+"?text="+encodeURIComponent("नमस्ते UP Chai Wala, मुझे सामान और कीमत की जानकारी चाहिए।"),"_blank")}
-function clearCart(){if(confirm("क्या आप कार्ट का सारा सामान हटाना चाहते हैं?")){cart={};saveCart()}}
-document.getElementById("year").textContent=new Date().getFullYear();
-makeFilters();renderProducts();renderCart();
+
+renderCategories();
+renderProducts();
+renderCart();
 </script>
 </body>
 </html>
-<!doctype html>
-<html lang="hi">
-<head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#14532d">
-<title>UP Chai Wala | Bakery & Cold Drink</title>
-<style>
-:root{--g:#14532d;--g2:#166534;--bg:#f4f8f4;--line:#e1e9e2;--muted:#657267;--orange:#f5a623}
-*{box-sizing:border-box}body{margin:0;background:var(--bg);color:#17251c;font-family:system-ui,-apple-system,"Noto Sans Devanagari",sans-serif}button,input,select{font:inherit}button{cursor:pointer}
-header{background:linear-gradient(135deg,#104725,#19713a);color:white;text-align:center;padding:23px 12px}.logo{font-size:30px}h1{margin:2px;font-size:26px}header p{margin:5px;color:#e3f3e7}.address{font-size:13px;margin-top:10px}
-nav{position:sticky;top:0;z-index:5;background:#fff;border-bottom:1px solid var(--line);display:flex;justify-content:center;gap:8px;padding:9px}nav a{color:var(--g);text-decoration:none;font-weight:700;padding:7px 10px;border-radius:18px}
-.wrap{max-width:1120px;margin:auto;padding:15px}.banner{background:linear-gradient(100deg,#dcfce7,#fff4d7);border-radius:17px;text-align:center;padding:22px 14px;margin:5px 0 18px}.banner h2{color:var(--g);margin:0 0 7px}.banner p{color:#4c5e50}.btn{border:0;background:var(--g);color:white;border-radius:9px;padding:11px 14px;font-weight:700}.orange{background:var(--orange);color:#382700}.title{font-size:21px;margin:18px 0 12px}.search,.field{width:100%;border:1px solid #d6e0d8;border-radius:10px;background:white;padding:11px 12px;margin:4px 0 9px}.tools{display:grid;grid-template-columns:1fr 190px;gap:8px}.filters{display:flex;gap:7px;overflow:auto;padding:4px 0 12px}.chip{white-space:nowrap;border:1px solid #d6e0d8;border-radius:22px;background:#fff;padding:8px 11px}.chip.active{background:var(--g);color:#fff}.note{font-size:12px;color:#6c4c12;background:#fff3d2;padding:10px;border-radius:9px;margin:10px 0}.layout{display:grid;grid-template-columns:minmax(0,1fr) 330px;gap:16px;align-items:start}.grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:11px}.product{background:#fff;border:1px solid var(--line);border-radius:14px;padding:11px;display:flex;flex-direction:column;min-width:0;box-shadow:0 2px 6px #00000008}.emoji{font-size:27px;background:#f1f7f1;width:47px;height:47px;border-radius:11px;display:grid;place-items:center}.product h3{font-size:14px;margin:8px 0 3px;overflow-wrap:anywhere}.meta,.small{font-size:12px;color:var(--muted)}.price{color:var(--g);font-weight:800;margin:8px 0}.product .btn{padding:9px 3px;font-size:12px;margin-top:auto}.cartbox{background:#fff;border:1px solid var(--line);border-radius:15px;padding:15px;position:sticky;top:58px}.cartbox h2{margin-top:0}.cartitem{display:grid;grid-template-columns:1fr auto;gap:6px;border-bottom:1px solid var(--line);padding:10px 0;font-size:13px}.cart-controls{display:flex;align-items:center;gap:7px;margin-top:5px}.cart-controls button{border:1px solid var(--line);background:#f3f8f3;border-radius:6px;padding:2px 9px}.total{display:flex;justify-content:space-between;font-weight:800;font-size:18px;padding:14px 0}.paybox{background:#f0fdf4;border:1px solid #ccebd4;border-radius:10px;padding:11px;margin:5px 0 12px}.empty{grid-column:1/-1;text-align:center;padding:25px;color:var(--muted)}footer{background:#103f25;color:#e7f5eb;text-align:center;padding:23px 10px;margin-top:28px}.float{position:fixed;right:14px;bottom:14px;z-index:9;border:0;border-radius:25px;background:#16833b;color:white;padding:13px 16px;font-weight:800;box-shadow:0 4px 15px #0002}
-@media(max-width:850px){.grid{grid-template-columns:repeat(3,minmax(0,1fr))}.layout{grid-template-columns:1fr}.cartbox{position:static}}
-@media(max-width:560px){.wrap{padding:11px}.grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.product{padding:9px}.tools{grid-template-columns:1fr}.banner{padding:18px 10px}nav{gap:0}nav a{font-size:13px;padding:7px 8px}}
-</style></head>
-<body>
-<header><div class="logo">☕ 🥐 🥤</div><h1>UP Chai Wala</h1><p><b>Bakery & Cold Drink</b></p><p>आपकी अपनी दुकान • चाय और नाश्ता</p><div class="address">📍 Mahu Ghat, Harraiya, Basti, UP 272155</div></header>
-<nav><a href="#home">होम</a><a href="#products">सामान</a><a href="#cart">कार्ट 🛒 <span id="count">0</span></a><a href="#checkout">ऑर्डर</a></nav>
-<main class="wrap" id="home">
-<section class="banner"><h2>स्वाद भी, अपनापन भी! ❤️</h2><p>गरमा-गरम चाय, स्वादिष्ट नाश्ता, बेकरी और कोल्ड ड्रिंक — सब एक ही जगह।</p><button class="btn" onclick="document.querySelector('#products').scrollIntoView()">🛍️ सामान देखें</button> <button class="btn orange" onclick="document.querySelector('#cart').scrollIntoView()">ऑर्डर करें</button></section>
-<h2 class="title" id="products">🛍️ हमारी दुकान के सामान</h2>
-<div class="note">दाम उदाहरण के लिए हैं। असली कीमत और उपलब्धता जाँचकर बदलें। इस वेबसाइट में भुगतान दुकान पर या सामान मिलने पर होगा।</div>
-<div class="tools"><input id="search" class="search" placeholder="🔎 चाय, समोसा, बिस्कुट खोजें..." oninput="renderProducts()"><select id="sort" class="search" onchange="renderProducts()"><option value="default">सामान का क्रम</option><option value="low">कम कीमत पहले</option><option value="high">ज्यादा कीमत पहले</option><option value="az">नाम के अनुसार</option></select></div>
-<div class="filters" id="filters"></div>
-<div class="layout"><section><div class="grid" id="productsGrid"></div><p class="small" id="resultCount"></p></section>
-<aside class="cartbox" id="cart"><h2>🛒 आपका कार्ट</h2><div id="cartItems"><p class="small">अभी कार्ट खाली है।</p></div><div class="total"><span>कुल बिल</span><span id="total">₹0</span></div>
-<div id="checkout"><h3>ऑर्डर की जानकारी</h3><label class="small" for="name">आपका नाम *</label><input class="field" id="name" placeholder="नाम लिखें"><label class="small" for="phone">आपका मोबाइल नंबर</label><input class="field" id="phone" inputmode="numeric" placeholder="मोबाइल नंबर"><label class="small" for="delivery">ऑर्डर का तरीका</label><select class="field" id="delivery"><option>दुकान से ले जाएंगे</option><option>डिलीवरी चाहिए (पहले पुष्टि करें)</option></select>
-<div class="paybox"><b style="color:#14532d">💵 भुगतान: दुकान पर या सामान मिलने पर</b><p class="small">पेमेंट संपर्क मोबाइल: 7393937360</p><p class="small">दी गई UPI ID: sonu-7393@ptyes</p><p class="small">आपने भुगतान का तरीका दुकान/सामान मिलने पर चुना है। UPI ID को अपने UPI ऐप में सही और सक्रिय होने की पुष्टि किए बिना भुगतान न करें। यह वेबसाइट पेमेंट अपने-आप प्राप्त या सत्यापित नहीं करती।</p></div>
-<label class="small" for="address">पता / अतिरिक्त जानकारी</label><input class="field" id="address" placeholder="पता या कोई खास बात"><button class="btn" style="width:100%" onclick="sendOrder()">WhatsApp पर ऑर्डर भेजें</button><p class="small">WhatsApp खुलेगा। संदेश जाँचकर Send दबाएँ। डिलीवरी और अंतिम कीमत दुकान से पक्की करें।</p><button class="btn" style="width:100%;background:#e8f4eb;color:#14532d" onclick="clearCart()">कार्ट खाली करें</button></div>
-</aside></div></main>
-<footer><b>UP Chai Wala — Bakery & Cold Drink</b><p>Mahu Ghat, Harraiya, Basti, Uttar Pradesh 272155</p><p>ऑर्डर की पुष्टि WhatsApp पर करें।</p><small>© <span id="year"></span> UP Chai Wala</small></footer>
-<button class="float" onclick="whatsapp()">WhatsApp 💬</button>
-<script>
-const WA="917393937360";
-const categories=["सभी सामान","चाय और नाश्ता","बेकरी","स्नैक्स","पेय पदार्थ","मिठाई और चॉकलेट","किराना","अन्य"];
-const base=[
-["चाय","चाय और नाश्ता","☕",10,"एक कप"],["कॉफी","चाय और नाश्ता","☕",20,"एक कप"],["समोसा","चाय और नाश्ता","🥟",10,"एक पीस"],["पकौड़ी","चाय और नाश्ता","🍘",20,"एक प्लेट"],["ब्रेड पकौड़ा","चाय और नाश्ता","🍞",15,"एक पीस"],["मैगी","चाय और नाश्ता","🍜",30,"एक प्लेट"],["पोहा","चाय और नाश्ता","🥣",25,"एक प्लेट"],["बिस्कुट","बेकरी","🍪",10,"एक पैकेट"],["केक","बेकरी","🍰",30,"एक पीस"],["ब्रेड","बेकरी","🍞",40,"एक पैकेट"],["रस्क / टोस्ट","बेकरी","🥨",30,"एक पैकेट"],["पेस्ट्री","बेकरी","🍰",35,"एक पीस"],["क्रीम रोल","बेकरी","🥐",20,"एक पीस"],["बन","बेकरी","🥯",10,"एक पीस"],["चिप्स","स्नैक्स","🥔",10,"एक पैकेट"],["नमकीन","स्नैक्स","🥜",20,"एक पैकेट"],["पॉपकॉर्न","स्नैक्स","🍿",20,"एक पैकेट"],["भुजिया","स्नैक्स","🥨",20,"एक पैकेट"],["चॉकलेट","मिठाई और चॉकलेट","🍫",20,"एक पीस"],["टॉफी","मिठाई और चॉकलेट","🍬",1,"एक पीस"],["लॉलीपॉप","मिठाई और चॉकलेट","🍭",5,"एक पीस"],["कोल्ड ड्रिंक","पेय पदार्थ","🥤",40,"एक बोतल"],["पानी की बोतल","पेय पदार्थ","💧",20,"एक बोतल"],["सोडा","पेय पदार्थ","🫧",20,"एक बोतल"],["एनर्जी ड्रिंक","पेय पदार्थ","⚡",60,"एक कैन"],["लस्सी","पेय पदार्थ","🥛",25,"एक गिलास"],["जूस","पेय पदार्थ","🧃",30,"एक पैक"],["दूध","किराना","🥛",30,"500 ml"],["चीनी","किराना","🧂",25,"500 ग्राम"],["नमक","किराना","🧂",20,"एक पैकेट"],["मैदा","किराना","🌾",35,"500 ग्राम"],["आटा","किराना","🌾",30,"500 ग्राम"],["दाल","किराना","🫘",60,"500 ग्राम"],["चावल","किराना","🍚",40,"500 ग्राम"],["तेल","किराना","🫗",80,"500 ml"],["साबुन","अन्य","🧼",35,"एक पीस"],["शैम्पू पाउच","अन्य","🧴",2,"एक पाउच"],["टिश्यू","अन्य","🧻",20,"एक पैक"],["बैटरी","अन्य","🔋",20,"एक जोड़ी"],["अगरबत्ती","अन्य","🪔",20,"एक पैकेट"],["अदरक वाली चाय","चाय और नाश्ता","☕",15,"एक कप"],["मसाला चाय","चाय और नाश्ता","☕",15,"एक कप"],["इलायची चाय","चाय और नाश्ता","☕",15,"एक कप"],["लेमन टी","चाय और नाश्ता","🍵",20,"एक कप"],["ब्रेड बटर","चाय और नाश्ता","🍞",25,"एक प्लेट"],["ब्रेड जैम","चाय और नाश्ता","🍞",25,"एक प्लेट"],["आलू टिक्की","चाय और नाश्ता","🥔",25,"एक प्लेट"],["कचौड़ी","चाय और नाश्ता","🥮",15,"एक पीस"],["जलेबी","मिठाई और चॉकलेट","🍥",30,"100 ग्राम"],["गुलाब जामुन","मिठाई और चॉकलेट","🍮",20,"एक पीस"],["लड्डू","मिठाई और चॉकलेट","🟠",20,"एक पीस"],["पेड़ा","मिठाई और चॉकलेट","🍬",20,"एक पीस"],["बर्फी","मिठाई और चॉकलेट","🍬",25,"एक पीस"],["मफिन","बेकरी","🧁",25,"एक पीस"],["डोनट","बेकरी","🍩",40,"एक पीस"],["वेज सैंडविच","चाय और नाश्ता","🥪",40,"एक पीस"],["बर्गर","चाय और नाश्ता","🍔",50,"एक पीस"],["फ्रेंच फ्राइज","चाय और नाश्ता","🍟",50,"एक प्लेट"],["मोमोज","चाय और नाश्ता","🥟",50,"एक प्लेट"],["चाउमीन","चाय और नाश्ता","🍜",50,"एक प्लेट"],["मूंगफली","स्नैक्स","🥜",10,"एक पैकेट"],["चना जोर गरम","स्नैक्स","🥜",10,"एक पैकेट"],["पापड़","स्नैक्स","🫓",20,"एक पैकेट"],["मखाना","स्नैक्स","🥣",50,"एक पैकेट"],["काजू","स्नैक्स","🥜",100,"100 ग्राम"],["बादाम","स्नैक्स","🥜",90,"100 ग्राम"],["ओट्स","किराना","🥣",60,"एक पैकेट"],["नूडल्स","किराना","🍜",15,"एक पैकेट"],["टोमैटो सॉस","किराना","🍅",50,"एक बोतल"],["अचार","किराना","🥭",40,"एक जार"],["जैम","किराना","🍓",60,"एक जार"],["शहद","किराना","🍯",100,"एक बोतल"],["बेसन","किराना","🌾",40,"500 ग्राम"],["सूजी","किराना","🌾",30,"500 ग्राम"],["हल्दी","किराना","🟡",25,"100 ग्राम"],["मिर्च पाउडर","किराना","🌶️",30,"100 ग्राम"],["चाय पत्ती","किराना","🍃",80,"250 ग्राम"],["कॉफी पाउडर","किराना","☕",100,"100 ग्राम"],["कुकीज़","बेकरी","🍪",30,"एक पैकेट"],["खारी","बेकरी","🥐",25,"एक पैकेट"],["पाव","बेकरी","🍞",25,"एक पैकेट"],["मसाला छाछ","पेय पदार्थ","🥛",25,"एक बोतल"],["ठंडा दूध","पेय पदार्थ","🥛",35,"एक बोतल"],["आइसक्रीम कप","मिठाई और चॉकलेट","🍨",30,"एक कप"],["कुल्फी","मिठाई और चॉकलेट","🍦",25,"एक पीस"],["च्युइंग गम","मिठाई और चॉकलेट","🍬",5,"एक पीस"],["पेन","अन्य","🖊️",10,"एक पीस"],["पेंसिल","अन्य","✏️",5,"एक पीस"],["कॉपी","अन्य","📒",30,"एक पीस"],["मोमबत्ती","अन्य","🕯️",10,"एक पैकेट"],["माचिस","अन्य","🔥",2,"एक डिब्बी"],["टूथब्रश","अन्य","🪥",25,"एक पीस"],["टूथपेस्ट","अन्य","🦷",45,"एक पैक"],["डिटर्जेंट","अन्य","🧺",30,"एक पैकेट"],["डिशवॉश बार","अन्य","🧽",20,"एक पीस"]
-];
-let products=base.map((x,i)=>({id:i+1,name:x[0],cat:x[1],emoji:x[2],price:x[3],unit:x[4]}));
-let id=products.length+1;
-const sizes=[["मिनी",0.5],["छोटा पैक",0.7],["रेगुलर पैक",1],["बड़ा पैक",1.5],["फैमिली पैक",2],["एक्स्ट्रा बड़ा",2.5]];
-base.forEach((x,i)=>sizes.forEach((s,j)=>{if((i+j)%3!==0)products.push({id:id++,name:x[0]+" - "+s[0],cat:x[1],emoji:x[2],price:Math.max(1,Math.round(x[3]*s[1])),unit:x[4]})}));
-const flavors=["मसाला","टमाटर","क्रीम एंड अनियन","चिली","चीज","क्लासिक","स्पाइसी","लेमन"];
-base.filter(x=>["चिप्स","नमकीन","कोल्ड ड्रिंक","जूस","बिस्कुट","चॉकलेट","मैगी","नूडल्स"].includes(x[0])).forEach(x=>flavors.forEach(f=>products.push({id:id++,name:x[0]+" ("+f+")",cat:x[1],emoji:x[2],price:x[3],unit:x[4]})));
-let category="सभी सामान",cart=JSON.parse(localStorage.getItem("upcw_cart")||"{}");
-function money(n){return "₹"+Number(n).toLocaleString("en-IN")}
-function safe(s){return String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]))}
-function filters(){document.getElementById("filters").innerHTML=categories.map(c=>`<button class="chip ${c===category?"active":""}" onclick="setCat('${c}')">${c}</button>`).join("")}
-function setCat(c){category=c;filters();renderProducts()}
-function renderProducts(){let q=document.getElementById("search").value.toLowerCase().trim();let list=products.filter(p=>(category==="सभी सामान"||p.cat===category)&&(p.name+" "+p.cat).toLowerCase().includes(q));let s=document.getElementById("sort").value;if(s==="low")list.sort((a,b)=>a.price-b.price);if(s==="high")list.sort((a,b)=>b.price-a.price);if(s==="az")list.sort((a,b)=>a.name.localeCompare(b.name,"hi"));document.getElementById("resultCount").textContent=`${list.length} सामान दिख रहे हैं • कैटलॉग में ${products.length} विकल्प`;document.getElementById("productsGrid").innerHTML=list.length?list.map(p=>`<article class="product"><div class="emoji">${p.emoji}</div><h3>${safe(p.name)}</h3><div class="meta">${safe(p.unit)}</div><div class="price">${money(p.price)}</div><button class="btn" onclick="add(${p.id})">＋ कार्ट में जोड़ें</button></article>`).join(""):'<div class="empty">यह सामान नहीं मिला। दूसरा नाम खोजें।</div>'}
-function add(n){cart[n]=(cart[n]||0)+1;save()}
-function qty(n,d){cart[n]=(cart[n]||0)+d;if(cart[n]<=0)delete cart[n];save()}
-function save(){localStorage.setItem("upcw_cart",JSON.stringify(cart));renderCart()}
-function renderCart(){let ids=Object.keys(cart).filter(n=>cart[n]>0),sum=0,count=0;document.getElementById("cartItems").innerHTML=ids.length?ids.map(n=>{let p=products.find(x=>x.id===+n);if(!p)return "";let sub=p.price*cart[n];sum+=sub;count+=cart[n];return `<div class="cartitem"><div><b>${safe(p.emoji+" "+p.name)}</b><div class="small">${money(p.price)} × ${cart[n]} = ${money(sub)}</div><div class="cart-controls"><button onclick="qty(${p.id},-1)">−</button><span>${cart[n]}</span><button onclick="qty(${p.id},1)">＋</button></div></div><button onclick="qty(${p.id},-${cart[n]})">✕</button></div>`}).join(""):'<p class="small">अभी कार्ट खाली है। सामान जोड़ें।</p>';document.getElementById("total").textContent=money(sum);document.getElementById("count").textContent=count}
-function orderMessage(){let ids=Object.keys(cart).filter(n=>cart[n]>0);if(!ids.length){alert("पहले कार्ट में सामान जोड़ें।");return null}let name=document.getElementById("name").value.trim();if(!name){alert("कृपया अपना नाम लिखें।");document.getElementById("name").focus();return null}let sum=0,lines=ids.map(n=>{let p=products.find(x=>x.id===+n),sub=p.price*cart[n];sum+=sub;return `• ${p.name} × ${cart[n]} = ${money(sub)}`});let phone=document.getElementById("phone").value.trim()||"नहीं दिया",delivery=document.getElementById("delivery").value,address=document.getElementById("address").value.trim()||"नहीं दिया";return `नमस्ते UP Chai Wala! मुझे यह ऑर्डर देना है:\\n\\n${lines.join("\\n")}\\n\\nकुल बिल: ${money(sum)}\\nभुगतान: दुकान पर या सामान मिलने पर (COD)\\nनाम: ${name}\\nग्राहक मोबाइल: ${phone}\\nऑर्डर तरीका: ${delivery}\\nपता/नोट: ${address}\\n\\nकृपया उपलब्धता, डिलीवरी और अंतिम कीमत की पुष्टि करें।`}
-function sendOrder(){let m=orderMessage();if(m)window.open("https://wa.me/"+WA+"?text="+encodeURIComponent(m),"_blank")}
-function whatsapp(){window.open("https://wa.me/"+WA+"?text="+encodeURIComponent("नमस्ते UP Chai Wala, मुझे सामान और कीमत की जानकारी चाहिए।"),"_blank")}
-function clearCart(){if(confirm("क्या कार्ट का सारा सामान हटाना चाहते हैं?")){cart={};save()}}
-document.getElementById("year").textContent=new Date().getFullYear();filters();renderProducts();renderCart();
-</script></body></html>
